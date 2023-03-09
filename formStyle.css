@@ -25,12 +25,12 @@ body{
 }
 .form_container h1{
     text-align: center;
-    font-family: "Castellar";
+    font-family: "Castellar", Arial, sans-serif;
 }
 .form_container ul{
     margin: 2px 0 0 0;
     list-style: none;
-    font-family: "Bahnschrift SemiBold";
+    font-family: "Bahnschrift SemiBold", Arial, sans-serif;
 }
 .form_container ul li input,select{
     margin: 5px 0 0 30px;
