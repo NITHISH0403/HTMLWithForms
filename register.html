@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Form</title>
+        <link rel="StyleSheet" href="formStyle.css">
+    </head>
+    <body>
+        <div class="form_container">
+            <img src="hire-php-development-services-banner-img-1.webp">
+            <form name="myform">
+                <h1>Register Form</h1><br>
+                <ul>
+                    <li>
+                        <label>NAME</label><br>
+                        <input type="text"  placeholder="Enter a Name" name="name" id="name" required>
+                        <p id="msg1">*Invalid input</p>
+                    </li><br>
+                    <li>
+                        <label>Date Of Birth</label><br>
+                        <input type="text" placeholder="Enter a DOB" name="dob">
+                    </li><br>
+                    <li>
+                        <label>Phone No</label><br>
+                        <input type="text" placeholder="Enter a Number" name="phone" id="phone" required>
+                        <p id="msg2">*Invalid input</p>
+                    </li><br>
+                    <li>
+                        <label>Language</label><br>
+                        <select name="lang">
+                            <option selected>Select</option>
+                            <option value="tamil">Tamil</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                        </select> 
+                    </li><br>
+                    <li>
+                        <label>Email Id</label><br>
+                        <input type="text" placeholder="Enter a Mail Id" name="eid">
+                    </li><br>
+                    <li>
+                        <input type="button" value="SUBMIT" id="button" onclick="invalidMsg()">
+                    </li><br>
+                </ul>
+            </form>
+        </div>
+        <script>
+            function invalidMsg(){
+                let inputName = document.getElementById("name").value;
+                let inputPhone = document.getElementById("phone").value;
+                if(inputName == ""){
+                    document.getElementById("msg1").style.display="block";
+                }
+                else{
+                    document.getElementById("msg1").style.display="none";
+                }
+                if(inputPhone === ""){
+                    document.getElementById("msg2").style.display="block";
+                }
+                else{
+                    document.getElementById("msg2").style.display="none";
+                }
+            }
+        </script>
+    </body>
+</html>
