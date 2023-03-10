@@ -61,24 +61,18 @@
                 }
             }
             function checkname(name){
-                let format = /^[0-9]+$/;
+                let format = /\d/;
                 if((name.match(format)) || (name == "")){
                     return false;
                 }
-                else{
-                    return true;
-
-                }
+                return true;
             }
             function checkPhone(n){
                 let format = /^[A-Za-z]+$/;
                 if((n.match(format)) || (n == "")){
                     return false;
                 }
-                else{
-                    return true;
-
-                }
+                return true;
             }
         </script>
     </body>
