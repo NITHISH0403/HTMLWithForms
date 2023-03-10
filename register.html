@@ -47,17 +47,37 @@
             function invalidMsg(){
                 let inputName = document.getElementById("name").value;
                 let inputPhone = document.getElementById("phone").value;
-                if(inputName == ""){
-                    document.getElementById("msg1").style.display="block";
-                }
-                else{
+                if(checkname(inputName)){
                     document.getElementById("msg1").style.display="none";
                 }
-                if(inputPhone === ""){
-                    document.getElementById("msg2").style.display="block";
+                else{
+                    document.getElementById("msg1").style.display="block";
+                }
+                if(checkPhone(inputPhone)){
+                    document.getElementById("msg2").style.display="none";
                 }
                 else{
-                    document.getElementById("msg2").style.display="none";
+                    document.getElementById("msg2").style.display="block";
+                }
+            }
+            function checkname(name){
+                let format = /^[0-9]+$/;
+                if((name.match(format)) || (name == "")){
+                    return false;
+                }
+                else{
+                    return true;
+
+                }
+            }
+            function checkPhone(n){
+                let format = /^[A-Za-z]+$/;
+                if((n.match(format)) || (n == "")){
+                    return false;
+                }
+                else{
+                    return true;
+
                 }
             }
         </script>
