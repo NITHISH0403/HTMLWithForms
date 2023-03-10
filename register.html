@@ -62,17 +62,11 @@
             }
             function checkname(name){
                 let format = /\d/;
-                if((name.match(format)) || (name == "")){
-                    return false;
-                }
-                return true;
+                return !((name.match(format)) || (name == ""));
             }
             function checkPhone(n){
                 let format = /^[A-Za-z]+$/;
-                if((n.match(format)) || (n == "")){
-                    return false;
-                }
-                return true;
+                return !((n.match(format)) || (n == ""));
             }
         </script>
     </body>
